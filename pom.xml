@@ -1,0 +1,72 @@
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>net.redf4rth</groupId>
+ <artifactId>zacback1</artifactId>
+ <version>1</version>
+
+ <repositories>
+  <repository>
+   <id>GeoSolutions</id>
+   <url>http://maven.geo-solutions.it/</url>
+  </repository>
+ </repositories>
+
+ <build>
+  <plugins>
+   <plugin>
+     <groupId>org.codehaus.gmavenplus</groupId>
+     <artifactId>gmavenplus-plugin</artifactId>
+     <version>1.5</version>
+     <executions>
+      <execution>
+        <goals>
+          <goal>addSources</goal>
+          <goal>addTestSources</goal>
+          <goal>compile</goal>
+          <goal>testCompile</goal>
+        </goals>
+      </execution>
+     </executions>
+   </plugin>
+    <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>java</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <mainClass>Sacback</mainClass>
+        </configuration>
+    </plugin>
+  </plugins>
+ </build>
+ <dependencies>
+   <dependency>
+     <groupId>org.codehaus.groovy</groupId>
+     <artifactId>groovy-all</artifactId>
+     <!-- any version of Groovy \>= 1.5.0 should work here -->
+     <version>2.4.7</version>
+   </dependency>
+   <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+   </dependency>
+   <dependency>
+    <groupId>it.geosolutions</groupId>
+    <artifactId>geoserver-manager</artifactId>
+    <version>1.7.0</version>
+   </dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.5.6</version>
+</dependency>
+ </dependencies>
+</project>
