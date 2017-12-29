@@ -16,7 +16,7 @@ class Sacback {
 
   println "sacback 4"
 
-  boolean created = publisher.createWorkspace("craigWorkspace")
+  boolean created = publisher.createWorkspace("kaitWorkspace")
   println created
   println "sacback 99"
  }
